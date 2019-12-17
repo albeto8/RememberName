@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var showingAddPicture = false
     @State private var selectedImage: UIImage?
     
+    let locationFetcher = LocationFetcher()
+    
     var body: some View {
         NavigationView {
             List(pictures.sorted()) { picture in
@@ -33,13 +35,14 @@ struct ContentView: View {
                 Image(systemName: "plus")
             })
             .sheet(isPresented: $showingAddPicture, onDismiss: saveData) {
-                AddPictureView(pictures: self.$pictures)
+                AddPictureView(pictures: self.$pictures, lastLocation: self.locationFetcher.lastKnownLocation)
             }
         }
         .onAppear(perform: loadData)
     }
     
     func loadData() {
+        self.locationFetcher.start()
         let filename = FileManager.default.getDocumentsDirectory().appendingPathComponent("SavedPictures")
 
         do {

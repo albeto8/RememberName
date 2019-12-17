@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct DetailView: View {
     var picture: Picture
@@ -18,14 +19,11 @@ struct DetailView: View {
                 .font(.largeTitle)
             Image(uiImage: UIImage.getImageFromDirectory(imageName: picture.name)!)
             .resizable()
-            .frame(width: 400, height: 400)
+                .frame(width: 200.0, height: 200.0)
             Spacer()
+            VStack {
+                MapView(centerCoordinate: picture.location)
+            }
         }
-    }
-}
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(picture: Picture(name: "Mario", imageURL: FileManager.default.getDocumentsDirectory().appendingPathComponent("Mario").appendingPathExtension("jpg")))
     }
 }

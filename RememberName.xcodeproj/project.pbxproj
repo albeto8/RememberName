@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2A8A0A523A85FF9009B7E80 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A8A0A423A85FF9009B7E80 /* LocationFetcher.swift */; };
+		F2A8A0A723A860D7009B7E80 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A8A0A623A860D7009B7E80 /* MapView.swift */; };
+		F2A8A0AA23A86123009B7E80 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A8A0A823A86123009B7E80 /* MKPointAnnotation-Codable.swift */; };
+		F2A8A0AB23A86123009B7E80 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A8A0A923A86123009B7E80 /* MKPointAnnotation-ObservableObject.swift */; };
 		F2D0C7AA23A6FE440072A99D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0C7A923A6FE440072A99D /* AppDelegate.swift */; };
 		F2D0C7AC23A6FE440072A99D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0C7AB23A6FE440072A99D /* SceneDelegate.swift */; };
 		F2D0C7AE23A6FE440072A99D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0C7AD23A6FE440072A99D /* ContentView.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2A8A0A423A85FF9009B7E80 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		F2A8A0A623A860D7009B7E80 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F2A8A0A823A86123009B7E80 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
+		F2A8A0A923A86123009B7E80 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		F2D0C7A623A6FE440072A99D /* RememberName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D0C7A923A6FE440072A99D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D0C7AB23A6FE440072A99D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 				F2D0C7AD23A6FE440072A99D /* ContentView.swift */,
 				F2D0C7CA23A707A10072A99D /* AddPictureView.swift */,
 				F2D0C7D023A71F090072A99D /* DetailView.swift */,
+				F2A8A0A623A860D7009B7E80 /* MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,8 +131,11 @@
 		F2D0C7C723A703E10072A99D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F2A8A0A823A86123009B7E80 /* MKPointAnnotation-Codable.swift */,
+				F2A8A0A923A86123009B7E80 /* MKPointAnnotation-ObservableObject.swift */,
 				F2D0C7CC23A7110C0072A99D /* FileManagerExtension.swift */,
 				F2D0C7CE23A71DC80072A99D /* UIImageExtension.swift */,
+				F2A8A0A423A85FF9009B7E80 /* LocationFetcher.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,11 +212,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D0C7BF23A700260072A99D /* Picture.swift in Sources */,
+				F2A8A0AA23A86123009B7E80 /* MKPointAnnotation-Codable.swift in Sources */,
+				F2A8A0A723A860D7009B7E80 /* MapView.swift in Sources */,
 				F2D0C7AA23A6FE440072A99D /* AppDelegate.swift in Sources */,
 				F2D0C7C323A702840072A99D /* ImageSaver.swift in Sources */,
 				F2D0C7D123A71F090072A99D /* DetailView.swift in Sources */,
+				F2A8A0A523A85FF9009B7E80 /* LocationFetcher.swift in Sources */,
 				F2D0C7C523A7028C0072A99D /* ImagePicker.swift in Sources */,
 				F2D0C7CB23A707A10072A99D /* AddPictureView.swift in Sources */,
+				F2A8A0AB23A86123009B7E80 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				F2D0C7CF23A71DC80072A99D /* UIImageExtension.swift in Sources */,
 				F2D0C7CD23A7110C0072A99D /* FileManagerExtension.swift in Sources */,
 				F2D0C7AC23A6FE440072A99D /* SceneDelegate.swift in Sources */,

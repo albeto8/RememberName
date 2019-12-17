@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct AddPictureView: View {
     
@@ -17,6 +18,7 @@ struct AddPictureView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
     @Binding var pictures: [Picture]
+    @State var lastLocation: CLLocationCoordinate2D?
     
     var body: some View {
         NavigationView {
@@ -56,7 +58,7 @@ struct AddPictureView: View {
         if !self.currentName.isEmpty && self.currentImage != nil {
             let pathToSaveImage = FileManager.default.getDocumentsDirectory().appendingPathComponent(self.currentName).appendingPathExtension("jpg")
             ImageSaver().writeToDisk(image: self.currentImage!, url: pathToSaveImage)
-            let picture = Picture(name: self.currentName, imageURL: pathToSaveImage)
+            let picture = Picture(name: self.currentName, imageURL: pathToSaveImage, location: self.lastLocation)
             self.pictures.append(picture)
         }
     }
